@@ -1,0 +1,90 @@
+/* --- Global Styles & Resets --- */
+:root {
+    --primary-color: #ffffff;
+    --secondary-color: #cccccc;
+    --accent-color: #00aaff;
+    --background-start: #1d2b3a;
+    --background-end: #0f172a;
+    --container-bg: rgba(0, 0, 0, 0.2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, var(--background-start), var(--background-end));
+    color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+    overflow: hidden;
+}
+
+/* --- Main Container & Layout --- */
+.main-container {
+    max-width: 700px;
+    width: 100%;
+    text-align: center;
+    padding: 40px 20px;
+    background: var(--container-bg);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* --- Header & Content --- */
+.header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+}
+
+.content h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.content p {
+    font-size: 1.1rem;
+    color: var(--secondary-color);
+    max-width: 600px;
+    margin: 0 auto 2.5rem auto; /* Added more bottom margin */
+    line-height: 1.6;
+}
+
+/* --- Social Media Links --- */
+.social-links a {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    margin: 0 15px;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--accent-color);
+    transform: translateY(-3px);
+}
+
+/* --- Media Queries for Responsiveness --- */
+@media (max-width: 768px) {
+    .content h2 {
+        font-size: 2.5rem;
+    }
+}
